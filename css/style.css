@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(16, 20, 27);
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.box {
+  display: grid;
+  border-radius: 6px;
+  background-color: #4b4b4c;
+  grid-gap: 2px;
+  width: 266px;
+  height: 342px;
+  overflow: hidden;
+  grid-template-areas:
+    "display display display display"
+    "par1 par2 clean del"
+    "number7 number8 number9 div"
+    "number4 number5 number6 mul"
+    "number1 number2 number3 sum"
+    "number0 number0 comma sub"
+    "equal equal equal equal";
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 8px 24px;
+}
+
+.box > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 65px;
+  height: 45px;
+  transition: 0.2s;
+}
+
+.mul,
+.div,
+.sum,
+.sub,
+.delete {
+  color: white;
+  background-color: #eb9648;
+}
+
+.equal {
+  color: white;
+  background-color: #d37f30;
+}
+
+.mul:hover,
+.div:hover,
+.sum:hover,
+.sub:hover,
+.delete:hover {
+  color: white;
+  background-color: #d37f30;
+}
+
+.equal:hover {
+  color: white;
+  background-color: #c47124;
+}
+
+.display {
+  text-align: right;
+  font-weight: 700;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  font-size: 32px !important;
+  height: 60px !important;
+  cursor: default !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  grid-area: display;
+}
+
+.par1 {
+  background-color: #d6d6d6;
+  grid-area: par1;
+}
+
+.par2 {
+  background-color: #d6d6d6;
+  grid-area: par2;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.clean {
+  background-color: #d6d6d6;
+  grid-area: clean;
+}
+
+.delete {
+  grid-area: del;
+}
+
+.par1:hover,
+.par2:hover,
+.clean:hover {
+  background-color: #c2c2c2;
+}
+
+.number {
+  background-color: #e0e0e0;
+}
+
+.number:hover,
+.comma:hover {
+  background-color: #d6d6d6;
+}
+
+.number0 {
+  grid-area: number0;
+}
+
+.number1 {
+  grid-area: number1;
+}
+
+.number2 {
+  grid-area: number2;
+}
+
+.number3 {
+  grid-area: number3;
+}
+
+.number4 {
+  grid-area: number4;
+}
+
+.number5 {
+  grid-area: number5;
+}
+
+.number6 {
+  grid-area: number6;
+}
+
+.number7 {
+  grid-area: number7;
+}
+
+.number8 {
+  grid-area: number8;
+}
+
+.number9 {
+  grid-area: number9;
+}
+
+.comma {
+  background-color: #e0e0e0;
+  grid-area: comma;
+}
+
+.dev {
+  position: fixed;
+  bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #eb9648;
+}
